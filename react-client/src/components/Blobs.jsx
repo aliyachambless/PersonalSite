@@ -88,13 +88,13 @@ export class Blobs extends Component {
     }
 
     getColor(num) {
-        if(num%3 == 0 && num > 6){
-            return '#4399de80';
-        } else if(num%3 == 1 && num > 6) {
-            return '#e3305680';
-        } else {
+        // if(num%3 == 0 && num > 6){
+        //     return '#4399de80';
+        // } else if(num%3 == 1 && num > 6) {
+        //     return '#e3305680';
+        // } else {
             return '#FEE23880';
-        }
+        // }
     }
 
     createBlobs(maker) {

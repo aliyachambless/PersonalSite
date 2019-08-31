@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import { Home } from './Home';
 import { NavBar } from './NavBar';
-import { About } from './About';
+import { Coding } from './Coding';
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
           <NavBar />
-          <Route name="home" exact path="/" component={Home} />
-          <Route exact path='/about' component={About} />
+          <Route exact path="/" component={Home} />
+          <Route exact path='/coding' component={Coding} />
         </div>
       </Router>
     )
