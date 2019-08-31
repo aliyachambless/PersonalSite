@@ -18,7 +18,6 @@ const Tiles = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
   padding-top: 100px;
   font-family: acumin-pro, sans-serif;
@@ -93,7 +92,7 @@ const getBlob = (maker) => {
 export class Coding extends Component {
   render() {
     return (
-      <div>
+      <div style={{display: "flex", justifyContent: "flex-start" }}>
         <Tiles>
           <Tile href="https://www.brightday.com/" target="_blank" id="dashcode" class="codingbox">
               <InlineSVG src={getBlob(blobs)} />
