@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Blobs} from './Blobs'
+import { Blobs } from './Blobs'
+import { Coding } from './Coding'
 import InlineSVG from 'svg-inline-react';
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic';
@@ -51,6 +52,9 @@ const ProjectBlob = styled(InlineSVG)`
     svg {
         margin-top: -20%;
         width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 0;
     }
 `
 
@@ -156,6 +160,7 @@ const SectionWipes = () => (
         <Scene pin>
           <div className="panel projects" id="projects">
               <ProjectBlob src={require("../images/whitepanel.svg")}/>
+              <Coding />
           </div>
         </Scene>
       </Controller>

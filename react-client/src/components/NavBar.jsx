@@ -100,8 +100,8 @@ const arrowStyle = {
 
 const contentStyle = {
     padding: "20px",
-    width: "100px",
-    marginTop: "10px",
+    width: "85px",
+    marginTop: "5px",
     borderRadius: "15% 30% 60% 40%",
     background: "#FEE238",
     border: "2px solid white",

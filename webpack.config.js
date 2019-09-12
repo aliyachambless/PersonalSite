@@ -1,6 +1,7 @@
 const path = require('path');
 const SRC_DIR = path.join(__dirname, '/react-client/src');
 const DIST_DIR = path.join(__dirname, '/react-client/dist');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
@@ -41,6 +42,10 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new HtmlWebpackPlugin({
+      template: `${SRC_DIR}/index.html`,
+      favicon: `${SRC_DIR}/images/favicon.png`
     })
   ]
 };

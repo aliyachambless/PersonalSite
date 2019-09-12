@@ -3,7 +3,6 @@ import InlineSVG from 'svg-inline-react';
 import blobs from 'blobs';
 import styled from 'styled-components'
 
-// CommonJS style
 //grab the core
 var KUTE = require("kute.js");
 // Add SVG Plugin
@@ -48,43 +47,49 @@ export class Blobs extends Component {
     }
 
     morph(morph, i, cycle) {
-        if(cycle){
-            KUTE.to('#shape-'+i, { path: '#second-'+i }, 
-            {
-                duration: 1000, 
-                complete() {
-                    morph(morph, i, false)
-                }
-            }).start();
-        } else {
-            KUTE.to('#shape-'+i, { path: '#first-'+i }, 
-            {
-                duration: 3000, 
-                complete() {
-                    morph(morph, i, true)
-                }
-            }).start();
+        var elem = document.querySelector(`#shape-`+i);
+        if (elem) {
+            if(cycle){
+                KUTE.to('#shape-'+i, { path: '#second-'+i }, 
+                {
+                    duration: 1000, 
+                    complete() {
+                        morph(morph, i, false)
+                    }
+                }).start();
+            } else {
+                KUTE.to('#shape-'+i, { path: '#first-'+i }, 
+                {
+                    duration: 3000, 
+                    complete() {
+                        morph(morph, i, true)
+                    }
+                }).start();
+            }
         }
     }
 
     move(move, i, x, y) {
         const left = Math.random()*(screen.width-500);
         const top = Math.random()*(screen.height-500);
-        KUTE.to(`.blob-`+i,
-        {
-            left: left,
-            top: top,
-            rotate: Math.random()*360,
-            scale: Math.random()+0.5 
-        }, {
-                duration: Math.sqrt((left-x)**2 + (top-y)**2)*30,
-                easing: 'easingQuinticInOut',
-                morphIndex: 127,
-                complete() {
-                    move(move, i, left, top)
+        var elem = document.querySelector(`.blob-`+i);
+        if (elem) {
+            KUTE.to(`.blob-`+i,
+            {
+                left: left,
+                top: top,
+                rotate: Math.random()*360,
+                scale: Math.random()+0.5 
+            }, {
+                    duration: Math.sqrt((left-x)**2 + (top-y)**2)*30,
+                    easing: 'easingQuinticInOut',
+                    morphIndex: 127,
+                    complete() {
+                        move(move, i, left, top)
+                    }
                 }
-            }
-        ).start();
+            ).start();
+        }
     }
 
     getColor(num) {
