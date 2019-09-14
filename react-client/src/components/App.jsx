@@ -4,6 +4,8 @@ import { browserHistory } from 'react-router';
 import { Home } from './Home';
 import { NavBar } from './NavBar';
 import { Coding } from './Coding';
+import { Art } from './Art';
+
 class App extends Component {
   render() {
     return (
@@ -12,6 +14,7 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={Home} />
           <Route exact path='/coding' component={Coding} />
+          <Route exact path='/art' component={Art} />
         </div>
       </Router>
     )

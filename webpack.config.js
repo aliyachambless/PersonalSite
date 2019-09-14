@@ -19,11 +19,18 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.png$/,
-        loader: 'url-loader?limit=100000&minetype=image/png'
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ]
       },
       {
-        test: /\.(jpg|pdf)/,
+        test: /\.(pdf)/,
         loader: 'file-loader'
       },
       {

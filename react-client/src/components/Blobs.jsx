@@ -14,7 +14,7 @@ require("kute.js/kute-attr");
 // Add Text Plugin
 require("kute.js/kute-text");
 
-const numBlobs = 8;
+const numBlobs = 4;
 
 const Blob = styled(InlineSVG)`
     position: absolute;
