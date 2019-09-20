@@ -111,7 +111,7 @@ export class Tile extends Component {
       blobraw.lastIndexOf('/>') - 2
     );
       console.log(start)
-    const blob = start + ' <path transform="translate(-35, -50) scale(1.2)" stroke="none" stroke-width="0" fill="#FEE238" id="blob-' + this.props.id + '" d="' + blobpath + '" /> <path stroke="none" stroke-width="0" fill="#FFF" id="saved-' + this.props.id + '" style="visibility:hidden" d="' + blobpath + '" /> </g> </svg> '
+    const blob = start + ' <path opacity="0" transform="translate(-40, -50) scale(1.2)" stroke="none" stroke-width="0" fill="#FEE238" id="blob-' + this.props.id + '" d="' + blobpath + '" /> <path stroke="none" stroke-width="0" fill="#FFF" id="saved-' + this.props.id + '" style="visibility:hidden" d="' + blobpath + '" /> </g> </svg> '
 
     return blob;
   }
@@ -142,17 +142,15 @@ export class Tile extends Component {
       }).start();
   }
 
-  // componentDidMount() {
-  //   KUTE.to('#blob-'+this.props.id, 
-  //     {
-  //       transform="scale(x, y)"
-  //       scale: 1.2
-  //     },
-  //     {
-  //         duration: 500,
-  //         morphIndex: 1000
-  //     }).start();
-  // }
+  componentDidMount() {
+    KUTE.to('#blob-'+this.props.id, 
+    {
+      opacity:"1"
+    },
+    {
+        duration: 500
+    }).start();
+  }
 
   render() {
     return (

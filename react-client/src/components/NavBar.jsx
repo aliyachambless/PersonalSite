@@ -11,8 +11,8 @@ const Header = styled.div`
     align-items: center;
     height: 65px;
     position: fixed;
-    z-index: 5;
-    // background: #ffffff;
+    z-index: 10;
+    background: ${props => props.white ? ' #ffffff' : 'transparent'};
 
   img {
     width: 30px;
@@ -85,11 +85,11 @@ const scrollToTop = () => {
     }
   };
 
-const Card = () => (
-    <div className="content">
-        <NavLink to="/coding"><div className="menu-item list" activeClassName="menu-item-active">Coding</div></NavLink>
-        <NavLink to="/design"><div className="menu-item list" activeClassName="menu-item-active">Design</div></NavLink>
-        <NavLink to="/art"><div className="menu-item list" activeClassName="menu-item-active">Art</div></NavLink>
+const Card = (click) => (
+    <div className="content" onClick={click}>
+        <NavLink to="/coding" onClick={() => scrollToTop()}><div className="menu-item list" activeClassName="menu-item-active">Coding</div></NavLink>
+        <NavLink to="/design" onClick={() => scrollToTop()}><div className="menu-item list" activeClassName="menu-item-active">Design</div></NavLink>
+        <NavLink to="/art" onClick={() => scrollToTop()}><div className="menu-item list" activeClassName="menu-item-active">Art</div></NavLink>
     </div>
 );
 
@@ -111,7 +111,7 @@ const contentStyle = {
 export class NavBar extends Component {
   render() {
     return (
-        <Header>
+        <Header white={window.location.pathname != "/"} onClick={()=>{this.setState({loc: window.location.pathname})}}>
         <div className="home-image"><Link to="/" onClick={() => scrollToTop()} className="header-style">Aliya Chambless</Link></div>
         <div className="menu-bar">
           <NavLink smooth to="/#about"><div className="menu-item" activeClassName="menu-item-active">About</div></NavLink>
@@ -123,7 +123,7 @@ export class NavBar extends Component {
             arrowStyle={arrowStyle}
             contentStyle={contentStyle}
         >
-            <Card/>
+            <Card click={()=>{this.setState({loc: window.location.pathname})}}/>
         </Popup>
         </div>
       </Header>

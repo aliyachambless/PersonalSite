@@ -4,6 +4,7 @@ import { Coding } from './Coding'
 import InlineSVG from 'svg-inline-react';
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 
 const CenterBlob = styled(InlineSVG)`
     position: absolute;
@@ -120,14 +121,14 @@ const SectionWipesStyled = styled.div`
   }
   
   .panel.projects {
-    height: 120vh;
+    height: 100vh;
     background-color: #FFF;
   }
 `;
 
 const SectionWipes = () => (
     <SectionWipesStyled>
-      <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+      <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}> 
         <Scene pin>
             <div className="panel">    
                 <MiddleDiv>
@@ -157,12 +158,25 @@ const SectionWipes = () => (
             </IconList>
           </div>
         </Scene>
-        <Scene pin>
+        <Scene 
+        pin>
           <div className="panel projects" id="projects">
               <ProjectBlob src={require("../images/whitepanel.svg")}/>
-              <Coding />
+              {/* <Coding /> */}
           </div>
         </Scene>
+          {/* <Scene
+          duration={100}
+          offset={0}
+          pin
+        >
+            <Tween
+              from={{
+                opacity: 0
+              }}
+            >
+            </Tween>
+        </Scene> */}
       </Controller>
     </SectionWipesStyled>
   );
@@ -171,7 +185,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        <Blobs />   
+        <Blobs /> 
         <SectionWipes/>
       </div>
     )
