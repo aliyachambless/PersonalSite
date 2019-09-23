@@ -81,87 +81,87 @@ const images = [
         src: "trisexualPaintin.png",
         thumbnailWidth: 2464,
         thumbnailHeight: 3194,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Oil Painting"
     },
     {
         src: "shaynaClose.jpg",
         thumbnailWidth: 1000,
         thumbnailHeight: 1333,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Oil Painting"
     },
     {
         src: "shaynaFull.jpg",
         thumbnailWidth: 3949,
         thumbnailHeight: 2969,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Oil Painting"
     },
 
     {
         src: "ibra.png",
         thumbnailWidth: 3300,
         thumbnailHeight: 2550,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Digital Art - Illustrator"
     },
     {
         src: "IMG_4955.JPG",
         thumbnailWidth: 3024,
         thumbnailHeight: 4032,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Ink Drawing"
     },
     {
         src:  "IMG_4958.jpg",
         thumbnailWidth: 3024,
         thumbnailHeight: 4032,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Ink Drawing"
     },
     {
         src: "IMG_5086.JPG",
         thumbnailWidth: 4032,
         thumbnailHeight: 3024,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Charcoal Drawing"
     },
     {
         src: "IMG_5238.jpg",
         thumbnailWidth: 3024,
         thumbnailHeight: 4032,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Charcoal Drawing"
     },
     {
         src: "IMG_7461.PNG",
         thumbnailWidth: 3000,
         thumbnailHeight: 3000,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Digital Art - Photoshop"
     },
     {
         src: "IMG_7462.PNG",
         thumbnailWidth: 1280,
         thumbnailHeight: 1280,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Digital Art - Photoshop"
     },
     {
         src: "IMG_9232.JPG",
         thumbnailWidth: 1385,
         thumbnailHeight: 1842,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Digital Art - Photoshop"
     },
     {
         src: "snakeFace.png",
         thumbnailWidth: 800,
         thumbnailHeight: 1083,
-        caption: "Boats (Jeshu John - designerspics.com)"
+        caption: "Digital Art - Photoshop"
     },
     {
         src: "albinoSnakeColor.png",
         thumbnailWidth: 3200,
         thumbnailHeight: 4162,
-        caption: "Digital Art"
+        caption: "Digital Art - Photoshop"
     },
-    {
-        src: "elegant.JPG",
-        thumbnailWidth: 2502,
-        thumbnailHeight: 3486,
-        caption: "Boats (Jeshu John - designerspics.com)"
-    },
+    // {
+    //     src: "elegant.JPG",
+    //     thumbnailWidth: 2502,
+    //     thumbnailHeight: 3486,
+    //     caption: "Boats (Jeshu John - designerspics.com)"
+    // },
 ]
 
 Art.defaultProps = {

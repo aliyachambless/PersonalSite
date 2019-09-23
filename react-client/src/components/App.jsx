@@ -5,6 +5,7 @@ import { Home } from './Home';
 import { NavBar } from './NavBar';
 import { Coding } from './Coding';
 import { Art } from './Art';
+import { Design } from './Design';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path='/coding' component={Coding} />
           <Route exact path='/art' component={Art} />
+          <Route exact path='/design' component={Design} />
         </div>
       </Router>
     )
