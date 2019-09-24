@@ -11,7 +11,7 @@ const Header = styled.div`
     align-items: center;
     height: 65px;
     position: fixed;
-    z-index: 10;
+    z-index: 20;
     background: ${props => props.white ? ' #ffffff' : 'transparent'};
 
   img {

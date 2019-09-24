@@ -4,7 +4,7 @@ import { Coding } from './Coding'
 import InlineSVG from 'svg-inline-react';
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
+import { HashLink as Link, NavHashLink as NavLink } from 'react-router-hash-link';
 
 const CenterBlob = styled(InlineSVG)`
     position: absolute;
@@ -14,6 +14,18 @@ const CenterBlob = styled(InlineSVG)`
     right: 0;
     margin-top: 30px;
     width: 1000px;
+`
+
+const ProjectsBlob = styled(InlineSVG)`
+  svg {
+    width: 30%;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+  }
+`
+
+const ProjectsLink = styled(Link)`
 `
 
 const AboutBlob = styled(InlineSVG)`
@@ -126,6 +138,14 @@ const SectionWipesStyled = styled.div`
   }
 `;
 
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 9);
+  }
+};
+
 const SectionWipes = () => (
     <SectionWipesStyled>
       <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}> 
@@ -162,7 +182,15 @@ const SectionWipes = () => (
         pin>
           <div className="panel projects" id="projects">
               <ProjectBlob src={require("../images/whitepanel.svg")}/>
-              {/* <Coding /> */}
+              <ProjectsLink onClick={() => scrollToTop()} to="/coding">
+                <ProjectsBlob src={require("../images/project-blob.svg")}/>
+              </ProjectsLink>
+              <ProjectsLink onClick={() => scrollToTop()} to="/art">
+                <ProjectsBlob src={require("../images/project-blob2.svg")}/>
+              </ProjectsLink>
+              <ProjectsLink onClick={() => scrollToTop()} to="/design">
+                <ProjectsBlob src={require("../images/project-blob3.svg")}/>
+              </ProjectsLink>
           </div>
         </Scene>
           {/* <Scene

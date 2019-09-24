@@ -154,12 +154,12 @@ export class Tile extends Component {
 
   render() {
     return (
-      <Container href="https://www.brightday.com/" target="_blank" id="dashcode" class="codingbox" onMouseEnter={this.hover} onMouseLeave={this.leave.bind(this)}>
+      <Container href={this.props.href} target="_blank" onMouseEnter={this.hover} onMouseLeave={this.leave.bind(this)}>
           <InlineSVG src={this.state.shape} id={"svg-"+this.props.id}/>
           <Title>{this.props.title}</Title>
           <Line />
           <Skills>Skills: {this.props.skills} {this.state.open && " | " + this.props.time}</Skills>
-          <Description open={this.state.open}>Tested and improved facial tracking software to detect the posture of the user. Built and maintained a user database using Firebase and the REST API</Description>
+          <Description open={this.state.open}>{this.props.description}</Description>
       </Container>
     )
   }

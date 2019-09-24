@@ -15,6 +15,13 @@ const Container = styled.div`
 
 const Caption = styled.div`
   font-family: acumin-pro, sans-serif;
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
 `
 
 export class Design extends React.Component {
@@ -154,7 +161,7 @@ const images = [
         src: "theylive.png",
         thumbnailWidth: 2550,
         thumbnailHeight: 3300,
-        caption: "Digital Art"
+        caption: "Brown University Film Forum screening poster"
     },
     {
         src: "getout.png",

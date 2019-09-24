@@ -15,6 +15,12 @@ const Container = styled.div`
 
 const Caption = styled.div`
   font-family: acumin-pro, sans-serif;
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
 `
 
 export class Art extends React.Component {
