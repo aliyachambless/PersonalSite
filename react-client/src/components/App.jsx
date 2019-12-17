@@ -7,6 +7,8 @@ import { Coding } from './Coding';
 import { Art } from './Art';
 import { DesignPortfolio } from './DesignPortfolio';
 import { Simmer } from './Simmer';
+import { Stack } from './Stack';
+import { RISD } from './RISD';
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
           <Route exact path='/art' component={Art} />
           <Route exact path='/design' component={DesignPortfolio} />
           <Route exact path='/simmer' component={Simmer} />
+          <Route exact path='/stackOverflow' component={Stack} />
+          <Route exact path='/risd' component={RISD} />
         </div>
       </Router>
     )

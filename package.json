@@ -26,6 +26,7 @@
     "react-grid-gallery": "^0.5.5",
     "react-gsap": "^1.2.0",
     "react-image": "^2.2.1",
+    "react-pdf": "^4.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-router-hash-link": "^1.2.2",
