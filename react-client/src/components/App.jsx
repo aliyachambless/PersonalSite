@@ -5,7 +5,10 @@ import { Home } from './Home';
 import { NavBar } from './NavBar';
 import { Coding } from './Coding';
 import { Art } from './Art';
-import { Design } from './Design';
+import { DesignPortfolio } from './DesignPortfolio';
+import { Simmer } from './Simmer';
+import { Stack } from './Stack';
+import { RISD } from './RISD';
 
 class App extends Component {
   render() {
@@ -16,7 +19,10 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path='/coding' component={Coding} />
           <Route exact path='/art' component={Art} />
-          <Route exact path='/design' component={Design} />
+          <Route exact path='/design' component={DesignPortfolio} />
+          <Route exact path='/simmer' component={Simmer} />
+          <Route exact path='/stackOverflow' component={Stack} />
+          <Route exact path='/risd' component={RISD} />
         </div>
       </Router>
     )
