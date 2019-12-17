@@ -81,7 +81,7 @@ export const StyledImage = styled(Img)`
     max-height: 100vh;
     object-fit: contain;
     // object-fit: cover;
-    // margin: 15px;
+    margin-bottom: 40px;
     // transition: all 0.2s ease-in-out 0s;
 `
 

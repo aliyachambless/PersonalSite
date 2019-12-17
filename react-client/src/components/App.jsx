@@ -9,6 +9,7 @@ import { DesignPortfolio } from './DesignPortfolio';
 import { Simmer } from './Simmer';
 import { Stack } from './Stack';
 import { RISD } from './RISD';
+import { Posters } from './Posters';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route exact path='/simmer' component={Simmer} />
           <Route exact path='/stackOverflow' component={Stack} />
           <Route exact path='/risd' component={RISD} />
+          <Route exact path='/posters' component={Posters} />
         </div>
       </Router>
     )

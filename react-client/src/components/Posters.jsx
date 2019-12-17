@@ -6,7 +6,7 @@ import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, Styl
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 
-export class RISD extends React.Component {
+export class Posters extends React.Component {
   state = {
     numPages: null,
     pageNumber: 1,
@@ -19,75 +19,72 @@ export class RISD extends React.Component {
     const { pageNumber, numPages } = this.state;
     return (
       <Container>
-        <Header>RISD Graphic Design: Winter 2019</Header>
+        <Header>Screening posters for Brown University Film Forum</Header>
         <Section>OVERVIEW</Section>
         <Hbox>
           <Title>Background</Title>
           <TextBlock>
-            This project was completed as part of Rhode Island School of Design's Intro to Graphic Design course. I designed a record cover (front and back of the sleeve) for Steve Lacy's Demo, with an accompagnying booklet.
+            I design screening posters for BUFF's weekly movie nights. This design project has been ongoing for three semesters, and is a unique opportunity to see my design in a specific format evolve.
           </TextBlock>
         </Hbox>
         <Line/>
         <Section>RESEARCH</Section>
         <Hbox>
-          <Title>Mood Board</Title>
+          <Title>The Royal Tenenbaums</Title>
           <TextBlock>
-            I first created a mood board for your record cover to express the feeling of the album. I wanted to capture a casual and alternative feeling conveyed through the motif of his unique tattos, and well as using red colors inspired by his popular song Dark Red.
+            In this poster, I tried to capture the ornate feeling of the movie with a graphic style that would catch people's attention.
           </TextBlock>
         </Hbox>
         <StyledImage
-          src={require('../images/design/steve_lacy_board_1.jpg')}
+          src={require('../images/design/royal-01.png')}
           // loader={/*any valid react element */}
         />
+        <Hbox>
+          <Title>A New Leaf</Title>
+          <TextBlock>
+            In this poster, I began experimenting with large swaths of color and graphic fonts to more effectively grab the attention of students walking by.
+          </TextBlock>
+        </Hbox>
         <StyledImage
-          src={require('../images/design/steve_lacy_board_4.png')}
+          src={require('../images/design/aNewLeaf.png')}
           // loader={/*any valid react element */}
         />
+        <Hbox>
+          <Title>They Live</Title>
+          <TextBlock>
+            This poster was an experiment in using the largest possible block of the most attention-grabbing color: red. I wanted this poster to stand out among the overcrowded poster walls at Brown.
+          </TextBlock>
+        </Hbox>
         <StyledImage
-          src={require('../images/design/steve_lacy_board_2.jpg')}
+          src={require('../images/design/theylive.png')}
           // loader={/*any valid react element */}
         />
+        <Hbox>
+          <Title>Death Proof</Title>
+          <TextBlock>
+            I experimented with using a different attention-grabbing color, yellow, and using a lot of black and negative space to make the form pop.
+          </TextBlock>
+        </Hbox>
         <StyledImage
-          src={require('../images/design/steve_lacy_board_3.jpg')}
+          src={require('../images/design/deathproof.png')}
+          // loader={/*any valid react element */}
+        />
+        <Hbox>
+          <Title>Duck Soup</Title>
+          <TextBlock>
+            I combined my previous experimentation with blocks of yellow and red for this poster, this time trying to use a block of red to more specifically highlight the stars of the movie.
+          </TextBlock>
+        </Hbox>
+        <StyledImage
+          src={require('../images/design/ducksoup-03.png')}
           // loader={/*any valid react element */}
         />
         <Line/>
-        <Section>DESIGN ITERATION</Section>
-        <Hbox>
-          <Title>Booklet</Title>
-          <TextBlock>
-          I made a booklet that goes with the album, with a list of the songs in the album, a short biography of the artist, an interview with the artist about the album, and the lyrics to one of the songs styled to emphasize their meaning.
-          </TextBlock>
-        </Hbox>
-        <StyledImage
-          src={require('../images/design/booklet_mockup.png')}
-          // loader={/*any valid react element */}
-        />
-        <Document
-          file={require('../images/design/steve_lacy_booklet.pdf')}
-          onLoadSuccess={this.onDocumentLoadSuccess}
-        >
-          <Page pageNumber={pageNumber} />
-        </Document>
-        <Hbox>
-          <Title>Record Cover</Title>
-          <TextBlock>
-          This is my final record cover design, which incorporates Steve Lacy's tattoos into a mural on the front, and incorporates the song of the album into his tattooed upper body on the back.
-          </TextBlock>
-        </Hbox>
-        <StyledImage
-          src={require('../images/design/vinyl_cover_front.png')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/design/vinyl_cover_back.png')}
-          // loader={/*any valid react element */}
-        />
         <Section>TAKEAWAYS AND NEXT STEPS</Section>
         <Hbox>
-          <Title>Design System</Title>
+          <Title>Poster Evolution</Title>
           <TextBlock>
-          My identity for the record could be applied to other things like a tote bag, website, etc. (How would I expand this into a system?)
+            Talk about how my posters have evolved.
           </TextBlock>
         </Hbox>
         {/* <Hbox>
