@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import InlineSVG from 'svg-inline-react';
 import Img from 'react-image'
-import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage } from './DetailsComponents';
+import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer} from './DetailsComponents';
 
 
 export class Simmer extends React.Component {
@@ -14,7 +14,7 @@ export class Simmer extends React.Component {
         <Hbox>
           <Title>Background</Title>
           <TextBlock>
-            This project was completed as part of Brown University's UI/UX course. We chose to design an interface for “Simmer”, a startup created by two recently graduated students, which creates a collection of reviews of dishes. It differentiates itself from Yelp or OpenTable through its specific focus on dishes rather than whole restaurant experiences. Simmer is an interesting user interaction experiment, as it requires some sort of incentive creation for people to be willing to user the app. There are also ways of thinking about functionalities that don’t currently exist (i.e. selecting combinations of menu items that you think complement each other well, favoriting dishes, or incorporating a newsfeed) that would be worth designing the UI for. We decided to design a mobile interface for Simmer for on-the-go ordering and browsing for food options. 
+            This project was completed as part of Brown University's UI/UX course. I worked with a group of four people, and I focused on designing the final interfaces in sketch while other group members focused on analyzing the User Testing results. We chose to design an interface for “Simmer”, a startup created by two recently graduated students, which creates a collection of reviews of dishes. It differentiates itself from Yelp or OpenTable through its specific focus on dishes rather than whole restaurant experiences. Simmer is an interesting user interaction experiment, as it requires some sort of incentive creation for people to be willing to user the app. There are also ways of thinking about functionalities that don’t currently exist (i.e. selecting combinations of menu items that you think complement each other well, favoriting dishes, or incorporating a newsfeed) that would be worth designing the UI for. We decided to design a mobile interface for Simmer for on-the-go ordering and browsing for food options. 
           </TextBlock>
         </Hbox>
         <Line/>
@@ -66,10 +66,12 @@ export class Simmer extends React.Component {
             This sketch has a map feature that allows people to browse an area and find the best dish that is closest to them. Like another sketch, it leaves room for the user to add a photo to their review, but doesn’t allow you to add multiple photos. It features a menu bar at the bottom of the screen for people to easily navigate between their likes, reviews, and profile. 
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/simmer/simmer_lofi.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/simmer/simmer_lofi.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Design Choices</Title>
           <TextBlock>
@@ -84,10 +86,12 @@ export class Simmer extends React.Component {
             After looking through our lo fi sketches and ideas for layout, we created one high fidelity prototype. We now took color, contrast, font size and style, and content into consideration, and tried to create a clean looking interface that allows users to focus on the dish and it’s reviews.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/simmer/simmer_hifi_v1.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/simmer/simmer_hifi_v1.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Feedback</Title>
           <TextBlock>
@@ -113,14 +117,18 @@ export class Simmer extends React.Component {
             After looking through our lo fi sketches and ideas for layout, we created one high fidelity prototype. We now took color, contrast, font size and style, and content into consideration, and tried to create a clean looking interface that allows users to focus on the dish and it’s reviews.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/simmer/simmer_hifi_v2_1.png')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/simmer/simmer_hifi_v2_2.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/simmer/simmer_hifi_v2_1.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/simmer/simmer_hifi_v2_2.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Section>TAKEAWAYS AND NEXT STEPS</Section>
         <Hbox>
           <Title>Quantitative Analysis</Title>

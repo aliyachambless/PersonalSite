@@ -43,6 +43,10 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
       }
     ]
   },

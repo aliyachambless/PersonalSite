@@ -97,14 +97,6 @@ export class DesignPortfolio extends React.Component {
     render () {
         return (
             <Container>
-                <Project to="/risd">
-                    <TitleImage imagePath={"risd_cover.png"}/>
-                    <ContentDetails>
-                        <h3>Graphic Design @RISD</h3>
-                        <Line/>
-                        <p>Projects from my Graphic Design course at the Rhode Island school of design.</p>
-                    </ContentDetails>
-                </Project>
                 <Project to="/stackOverflow">
                     <TitleImage imagePath={"stack_cover.png"}/>
                     <ContentDetails>
@@ -119,6 +111,22 @@ export class DesignPortfolio extends React.Component {
                         <h3>Iterative Design and User Testing</h3>
                         <Line/>
                         <p>Redesign for Simmer Startup with user testing (CS1300)</p>
+                    </ContentDetails>
+                </Project>
+                {/* <Project to="/fashion">
+                    <TitleImage imagePath={"fashion_cover.png"}/>
+                    <ContentDetails>
+                        <h3>exchange@brown website</h3>
+                        <Line/>
+                        <p>Redesign for Simmer Startup with user testing (CS1300)</p>
+                    </ContentDetails>
+                </Project> */}
+                <Project to="/risd">
+                    <TitleImage imagePath={"risd_cover.png"}/>
+                    <ContentDetails>
+                        <h3>Graphic Design @RISD</h3>
+                        <Line/>
+                        <p>Projects from my Graphic Design course at the Rhode Island school of design.</p>
                     </ContentDetails>
                 </Project>
                 <Project to="/posters">

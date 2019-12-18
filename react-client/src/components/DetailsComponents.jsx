@@ -35,6 +35,10 @@ export const Hbox = styled.div`
   margin-bottom: 60px;
 `
 
+export const ImageContainer = styled.div`
+  display: flex;
+`
+
 export const Title = styled.div`
   flex: 2;
   font-size: 22px;
@@ -49,7 +53,7 @@ export const TextBlock = styled.div`
 
 export const Line = styled.div`
   background: black;
-  height: 2px;
+  height: 1px;
   width: 100%;
   margin-bottom: 40px;
   z-index: 9;
@@ -77,12 +81,9 @@ export const ThiccQ = styled.div`
 `
 
 export const StyledImage = styled(Img)`
-    max-width: 100vw;
-    max-height: 100vh;
-    object-fit: contain;
-    // object-fit: cover;
+    max-width: 100%;
+    align-self: center;
     margin-bottom: 40px;
-    // transition: all 0.2s ease-in-out 0s;
 `
 
 export const PopOutQ = props => (

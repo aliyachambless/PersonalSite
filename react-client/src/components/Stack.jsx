@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-import InlineSVG from 'svg-inline-react';
-import Img from 'react-image'
-import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage } from './DetailsComponents';
+import { Player } from 'video-react';
+import "video-react/dist/video-react.css";
+import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer } from './DetailsComponents';
 
 
 export class Stack extends React.Component {
@@ -60,10 +59,12 @@ export class Stack extends React.Component {
           Keeping in mind the usability issues I found in the previous step, I sketched out four main pages and their connections.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/stack/stackOverflow-01.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/stack/stackOverflow-01.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Usability Explanation</Title>
           <TextBlock>
@@ -107,39 +108,43 @@ export class Stack extends React.Component {
           The filter/sort of the search page was very different compared to Questions page and gave you less power, so I added the same functionality to the search page following the design choice of the Question page. There was also no quick view / expanded view of a certain question, so I added functionality to see more question information before leaving the page. The stack overflow page was also very crowded and overwhelming, making it hard to find important information. I added a lot of white space and deleted redundant and unimportant text. I added the least important info to the right column, because that is where people look at least.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/stack/stackOverflow.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/stack/stackOverflow.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Responsive Redesign</Title>
           <TextBlock>
             After making the visual design of the search page, I thought about how the page would react to different screen sizes.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/stack/stackOverflow-02.png')}
-          // loader={/*any valid react element */}
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/stack/stackOverflow-02.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <Player
+          playsInline
+          // poster="/assets/poster.png"
+          src={require('../images/stack/stack_responsive.mp4')}
         />
+        <Line style={{marginTop: "60px"}}/>
         <Section>TAKEAWAYS AND NEXT STEPS</Section>
-        {/* <Hbox>
-          <Title>Quantitative Analysis</Title>
-          <TextBlock>
-          Users were generally comfortable using their interface. They all had positive things to say about its appearance and layout, saying that it is simple and attractive and they could carry out tasks efficiently. This is also reflected by the metrics, where all users had a 100% completion rate on the tasks, and only one user made an error. This error was instantly noticed and corrected by the user. The time on task is also as expected. Task 1 took a longer time as users were describing their evaluation process for their dishes and as they browsed through the reviews for the dishes.
-          </TextBlock>
-        </Hbox>
         <Hbox>
           <Title>Potential Changes</Title>
           <TextBlock>
-          We propose a few minor interface changes based off some feedback given by the users. One user reported that it could be convenient to have a “Favorite” feature for dishes so that they could reference their top dishes on the go. We propose that we could add a bookmark button within each dish page to allow a user to favorite a dish, and a button on the top left corner of the app for a quick reference to a list of favorite dishes.  
+          I would like to spend more time testing out different color palettes, especially with the green. I would also like to try applying this design style to other pages in other states.
           </TextBlock>
         </Hbox>
         <Hbox>
           <Title>Reflection</Title>
           <TextBlock>
-          We believe that the user testing experience was extremely successful. We started our app design with a concept that we believed was intuitive and easy to use. However, by testing with users, both live and online, we realized that there was plenty of room for improvement and was able to iterate to develop an app with a more pleasant user experience that maximizes user’s ability to browse and clickability. We learnt to be open to the ideas of others and to think critically about everyone’s comments. We also learnt to that we need to critically evaluate how we ask our questions to users in order to draw out constructive criticisms from them. 
+          This exercise gave me the chance to focus on how many different elements respond to different screen sizes, and has influenced my recent designs as I consider the most effient ways to display information.
           </TextBlock>
-        </Hbox> */}
+        </Hbox>
       </Container>
     )
   }

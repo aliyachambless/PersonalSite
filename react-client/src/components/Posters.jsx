@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import InlineSVG from 'svg-inline-react';
 import Img from 'react-image'
-import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage } from './DetailsComponents';
+import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer} from './DetailsComponents';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 
@@ -35,50 +35,60 @@ export class Posters extends React.Component {
             In this poster, I tried to capture the ornate feeling of the movie with a graphic style that would catch people's attention.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/royal-01.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/royal-01.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>A New Leaf</Title>
           <TextBlock>
             In this poster, I began experimenting with large swaths of color and graphic fonts to more effectively grab the attention of students walking by.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/aNewLeaf.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/aNewLeaf.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>They Live</Title>
           <TextBlock>
             This poster was an experiment in using the largest possible block of the most attention-grabbing color: red. I wanted this poster to stand out among the overcrowded poster walls at Brown.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/theylive.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/theylive.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Death Proof</Title>
           <TextBlock>
             I experimented with using a different attention-grabbing color, yellow, and using a lot of black and negative space to make the form pop.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/deathproof.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/deathproof.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Hbox>
           <Title>Duck Soup</Title>
           <TextBlock>
             I combined my previous experimentation with blocks of yellow and red for this poster, this time trying to use a block of red to more specifically highlight the stars of the movie.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/ducksoup-03.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/ducksoup-03.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Line/>
         <Section>TAKEAWAYS AND NEXT STEPS</Section>
         <Hbox>

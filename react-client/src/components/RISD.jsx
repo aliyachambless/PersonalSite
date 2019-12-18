@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import InlineSVG from 'svg-inline-react';
 import Img from 'react-image'
-import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage } from './DetailsComponents';
+import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer } from './DetailsComponents';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 
@@ -35,22 +35,30 @@ export class RISD extends React.Component {
             I first created a mood board for your record cover to express the feeling of the album. I wanted to capture a casual and alternative feeling conveyed through the motif of his unique tattos, and well as using red colors inspired by his popular song Dark Red.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/steve_lacy_board_1.jpg')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/design/steve_lacy_board_4.png')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/design/steve_lacy_board_2.jpg')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/design/steve_lacy_board_3.jpg')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/steve_lacy_board_1.jpg')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/steve_lacy_board_4.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/steve_lacy_board_2.jpg')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/steve_lacy_board_3.jpg')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Line/>
         <Section>DESIGN ITERATION</Section>
         <Hbox>
@@ -59,10 +67,12 @@ export class RISD extends React.Component {
           I made a booklet that goes with the album, with a list of the songs in the album, a short biography of the artist, an interview with the artist about the album, and the lyrics to one of the songs styled to emphasize their meaning.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/booklet_mockup.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/booklet_mockup.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Document
           file={require('../images/design/steve_lacy_booklet.pdf')}
           onLoadSuccess={this.onDocumentLoadSuccess}
@@ -75,14 +85,18 @@ export class RISD extends React.Component {
           This is my final record cover design, which incorporates Steve Lacy's tattoos into a mural on the front, and incorporates the song of the album into his tattooed upper body on the back.
           </TextBlock>
         </Hbox>
-        <StyledImage
-          src={require('../images/design/vinyl_cover_front.png')}
-          // loader={/*any valid react element */}
-        />
-        <StyledImage
-          src={require('../images/design/vinyl_cover_back.png')}
-          // loader={/*any valid react element */}
-        />
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/vinyl_cover_front.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <StyledImage
+            src={require('../images/design/vinyl_cover_back.png')}
+            // loader={/*any valid react element */}
+          />
+        </ImageContainer>
         <Section>TAKEAWAYS AND NEXT STEPS</Section>
         <Hbox>
           <Title>Design System</Title>
