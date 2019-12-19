@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import InlineSVG from 'svg-inline-react';
 import Img from 'react-image'
+import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 export const Container = styled.div`
   padding-left: 20%;
@@ -29,14 +30,48 @@ export const Section = styled.div`
   opacity: 0.7;
   margin-bottom: 40px;
 `
-
+ButtonContainer
 export const Hbox = styled.div`
   display: flex;
   margin-bottom: 60px;
 `
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 20px;
+`
+
+export const GooeyButton = styled.button`
+  background: white;
+  -webkit-transition: height .6s, width .25s;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border: none !important;
+  :focus {
+    outline:0;
+  }
+  :hover {
+    width: 50px;
+    height: 50px;
+  }
+`
+
 export const ImageContainer = styled.div`
   display: flex;
+`
+
+export const PDFContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: #CCCCCC;
+  padding-top: 40px;
+  margin-bottom: 60px;
 `
 
 export const Title = styled.div`
@@ -81,6 +116,12 @@ export const ThiccQ = styled.div`
 `
 
 export const StyledImage = styled(Img)`
+    max-width: 100%;
+    align-self: center;
+    margin-bottom: 40px;
+`
+
+export const PDF = styled(Document)`
     max-width: 100%;
     align-self: center;
     margin-bottom: 40px;

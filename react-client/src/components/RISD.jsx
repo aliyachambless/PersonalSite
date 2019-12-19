@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import InlineSVG from 'svg-inline-react';
 import Img from 'react-image'
-import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer } from './DetailsComponents';
+import { Container, Header, Line, Hbox, Section, TextBlock, PopOutQ, Title, StyledImage, ImageContainer, PDF, PDFContainer, GooeyButton, ButtonContainer } from './DetailsComponents';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 
 
@@ -14,6 +14,14 @@ export class RISD extends React.Component {
  
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
+  }
+
+  changePage = (pageChange) => {
+    const newPage = this.state.pageNumber + pageChange;
+    if(newPage > 0 && newPage <= 7) {
+      console.log(pageChange)
+      this.setState({pageNumber: newPage});
+    }
   }
   render() {
     const { pageNumber, numPages } = this.state;
@@ -73,12 +81,22 @@ export class RISD extends React.Component {
             // loader={/*any valid react element */}
           />
         </ImageContainer>
-        <Document
-          file={require('../images/design/steve_lacy_booklet.pdf')}
-          onLoadSuccess={this.onDocumentLoadSuccess}
-        >
-          <Page pageNumber={pageNumber} />
-        </Document>
+        <PDFContainer>
+          <PDF
+            file={require('../images/design/steve_lacy_booklet.pdf')}
+            onLoadSuccess={this.onDocumentLoadSuccess}
+          >
+            <Page pageNumber={pageNumber} />
+          </PDF>
+          <ButtonContainer>
+            <GooeyButton onClick={() => this.changePage(-1)}>
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </GooeyButton>
+            <GooeyButton onClick={() => this.changePage(1)}>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </GooeyButton>
+          </ButtonContainer>
+        </PDFContainer>
         <Hbox>
           <Title>Record Cover</Title>
           <TextBlock>
