@@ -94,7 +94,7 @@ export class Posters extends React.Component {
         <Hbox>
           <Title>Poster Evolution</Title>
           <TextBlock>
-            Talk about how my posters have evolved.
+            Looking back at my posters for the last three semesters, it is interesting to observe how they have changed. I made use of large areas of bright colors such as red and yellow, and greatly simplified my shapes to attract more attention.
           </TextBlock>
         </Hbox>
         {/* <Hbox>

@@ -119,7 +119,7 @@ export class RISD extends React.Component {
         <Hbox>
           <Title>Design System</Title>
           <TextBlock>
-          My identity for the record could be applied to other things like a tote bag, website, etc. (How would I expand this into a system?)
+          My identity for the record could be applied to other things like a tote bag, website, etc. These designs could be a basis for an entire system based on dark red colors, casual sketched tattoos, and hand-drawn lettering.
           </TextBlock>
         </Hbox>
         {/* <Hbox>
